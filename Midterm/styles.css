@@ -1,0 +1,204 @@
+/* GENERAL */
+
+body {
+    font-family: pokemonClassic;
+    background-color: #fbd743;
+    margin: 0;
+}
+
+#title {
+    color: black;
+}
+
+header {
+    background-color: #fbd743;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* div element that contains all pokemon containers */
+#pokemon-list {
+    /* width: 90%; */
+    padding-top: 10px;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-columns: 190px;
+    gap: 20px;
+}
+
+/* container that holds search box and label */
+#text-box {
+    display: inline-block;
+    margin-left: 0%;
+    max-width: 300px;
+    padding: 5px;
+}
+
+/* container that holds select dropdown and label */
+#dropdown {
+    display: inline-block;
+    margin-right: 0%;
+    padding: 5px;
+}
+
+section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+h1 {
+    text-align: center;
+    font-family: pokeFontHollow;
+    font-size: 50px;
+    color: #363b81;
+    text-shadow: -1px 1px 1px #363b81;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-family: pokeFontSolid;
+    font-size: 20px;
+    color: #ff1f1f;
+    margin: 0px;
+    letter-spacing: 2px;
+}
+
+h3 {
+    display:inline-block;
+    text-align: left;
+    font-family: pokemonClassic;
+    font-size: 10px;
+    padding: 5px;
+    /* margin-top: 0px; */
+    margin-top: 0px;
+    /* color: #ff1f1f;
+    margin: 0px;
+    letter-spacing: 2px; */
+}
+
+/* class for sprite images */
+.sprite {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+/* class for container for pokemon name text box */
+.text-container {
+    /* height: 56px; */
+    padding: 5px;
+    margin-bottom: auto;
+}
+
+/* class for container for sprite images */
+.sprite-container {
+    height: 100px;
+    /* padding: 5px; */
+}
+
+/* class for container for type images */
+.type-container{
+   padding-top:10px;
+   padding-bottom:20px;
+}
+
+/* class for pokemon type images */
+.type-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-top:0; */
+    padding: 5px;
+}
+
+/* container that holds each pokemon "card" */
+.card {
+    /* width: 190px; */
+    /* height: 250px; */
+    display: flex;
+    flex-direction: column;
+    background-color: #5db9ff;
+    border: 5px solid #363b81;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* for "search pokemon" button */
+button {
+    padding: 10px;
+    width: 150px;
+    display: block;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: red;
+    border-color: red;
+    font-family: pokemonClassic;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/* button changes color on hover */
+button:hover {
+    background-color: #363b81;
+    border-color: #363b81;
+    color: white;
+}
+
+form {
+    border: 4px solid #363b81;
+    background-color: #5db9ff;
+    padding: 5px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+form label {
+    padding: 5px 0;
+    display: block;
+    font-size: 12px;
+    /* margin-top: 15px; */
+}
+
+form select {
+    width: 100px;
+}
+
+form .error {
+    font-size: 80%;
+    color: darkred;
+}
+
+.checkbox label {
+    display: inline-block;
+}
+
+/* FONTS */
+@font-face {
+    font-family: pokeFontHollow;
+    src: url(Assets/pokemon/Pokemon_Hollow.ttf);
+}
+
+@font-face {
+    font-family: pokeFontSolid;
+    src: url(Assets/pokemon/Pokemon_Solid.ttf);
+}
+
+@font-face {
+    font-family: pokemonClassic;
+    src: url(Assets/Pokemon_Classic.ttf);
+}

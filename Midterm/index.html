@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>UX/UI Javascript Midterm Project</title>
+    <meta name="description" content="Spring 2024 Javascript Midterm Project">
+    <meta name="author" content="Sara Celidonio">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- function that shows textbox only when name is selected in dropdown -->
+    <script type="text/javascript">
+        function showCheckBox() {
+        var checkbox = document.getElementById("checkbox");
+        var checkbox2 = document.getElementById("checkbox-2");
+        if (document.forms[0].category.options[document.forms[0].category.selectedIndex].value == "name") {
+            checkbox.style.display = "block";
+            checkbox2.style.display = "block";
+        }
+        else {
+            checkbox.style.display = "none";
+            checkbox2.style.display = "none";
+        }
+        }
+        </script>
+</head>
+
+<body>
+    <h1>Sara's PokeSearch</h1>
+    <section>
+        <div id="search-box">
+            <form name="pokemon-search" id="pokemon-search" onchange="showCheckBox()">
+                <div id="text-box">
+                    <label for="input">Enter pokemon name or type:</label>
+                    <input type="text" id="input" name="search-box" placeholder="Enter search term" size="40"
+                        maxlength="40" required>
+                </div>
+                <div id="dropdown">
+                    <label for="search-category">Search by:</label>
+                    <select name="category" id="search-category" required>
+                        <option value="name">Name</option>
+                        <option value="type">Type</option>
+                    </select>
+                </div>
+                <div id="checkbox" class="checkbox">
+                    <input type="checkbox" id="show-evolution" name="evolution-line-checkBox">
+                    <label for="show-evolution"> Show evolutionary line</label><br>
+                </div>
+                <div id="checkbox-2" class="checkbox">
+                    <input type="checkbox" id="show-varieties" name="varieties-checkBox">
+                    <label for="show-varieties"> Show all varieties</label><br>
+                </div>
+                <button id="fetch-pokemon" type="submit" form="pokemon-search">Fetch Pokemon</button>
+            </form>
+        </div>
+        <div id="pokemon-list" class="pokemon-list"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
